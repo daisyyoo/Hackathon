@@ -84,3 +84,7 @@ th {
   background-color: black;
   color: white;
 }
+
+input {
+  cursor: pointer;
+}
