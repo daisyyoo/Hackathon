@@ -22,7 +22,13 @@ function handleModalClick(event) {
 
 function scheduleUpdate(event) {
   $tableHeader.textContent = 'Scheduled Events for ' + event.target.textContent;
-  createListEntries(data, event.target.textContent.toLowerCase());
+  dataModel.view = event.target.textContent.toLowerCase();
+  for (var i = 0; i < $tableSelector.children.length; i++) {
+    $tableSelector.removeChild($tableSelector.children[i]);
+  }
+  if (event.target.textContent.toLowerCase() === dataModel.view) {
+    createListEntries(data, event.target.textContent.toLowerCase());
+  }
 }
 
 // other functions
@@ -50,14 +56,14 @@ function createListEntries(object, dayOfWeek) {
         generateDomTree('td', { textContent: object[dayOfWeek][i].time }),
         generateDomTree('td', { textContent: object[dayOfWeek][i].description })
       ]);
-      $tableSelector.appendChild(entries);
     } else {
-      var emptyEntry = generateDomTree('tr', {}, [
+      entries = generateDomTree('tr', {}, [
         generateDomTree('td', { textContent: 'No time' }),
         generateDomTree('td', { textContent: 'No plans made yet' })
       ]);
-      $tableSelector.appendChild(emptyEntry);
+
     }
+    $tableSelector.appendChild(entries);
   }
 }
 
@@ -114,5 +120,5 @@ var data = {
 
 var dataModel = {
   days: data,
-  view: 'monday'
+  view: 'tuesday'
 };
