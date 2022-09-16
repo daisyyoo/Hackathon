@@ -38,3 +38,12 @@
   padding: 1rem 2rem;
   cursor: pointer;
 }
+
+.schedule-table {
+  flex-basis: 100%;
+  flex-direction: column;
+}
+
+thead {
+  text-align: left;
+}

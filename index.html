@@ -52,34 +52,36 @@
       </div>
       <div class="row">
         <div class="column-full">
-          <div class="schedule-table">
-            <caption class="table-header">
+          <div class="schedule-table center">
+            <h1 class="table-header">
               Scheduled Events for Monday
-            </caption>
-            <thead>
-              <tr>
-                <th>
-                  Time
-                </th>
-                <th>
-                  Description
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  10:00
-                </td>
-                <td>
-                  Coding junk
-                </td>
-              </tr>
-            </tbody>
+            </h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    Time
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    10:00
+                  </td>
+                  <td>
+                    Coding junk
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-      <div class="modal-container">
+      <form class="modal-container">
         <div class="row">
           <h1>
             Add Entry
@@ -128,12 +130,12 @@
           </select>
         </div>
         <div class="row">
-
+          <textarea name="new-entry-textarea" cols="30" rows="10" placeholder="Description"></textarea>
         </div>
         <div class="row">
-
+          <input type="submit" name="button-submit" value="submit">
         </div>
-      </div>
+      </form>
     </div>
   </main>
   <script src="main.js"></script>
