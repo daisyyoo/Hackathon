@@ -1,0 +1,18 @@
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.weekday-spacing {
+  display: flex;
+  justify-content: space-evenly;
+}
